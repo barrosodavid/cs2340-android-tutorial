@@ -3,7 +3,9 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
+  site: 'https://barrosodavid.github.io/cs2340-android-tutorial/',
+  base: '/cs2340-android-tutorial',
+  integrations: [
 		starlight({
 			title: 'Android Quickstart',
 			social: {
