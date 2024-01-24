@@ -9,7 +9,7 @@ export default defineConfig({
 		starlight({
 			title: 'Android Quickstart',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/barrosodavid/cs2340-android-tutorial',
 			},
       customCss: [
         './src/styles/custom.css'
