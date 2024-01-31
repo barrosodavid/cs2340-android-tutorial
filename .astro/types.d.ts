@@ -185,13 +185,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
-"guides/example.md": {
-	id: "guides/example.md";
-  slug: "guides/example";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
@@ -202,6 +195,20 @@ declare module 'astro:content' {
 "reference/example.md": {
 	id: "reference/example.md";
   slug: "reference/example";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"start/install-android-studio.md": {
+	id: "start/install-android-studio.md";
+  slug: "start/install-android-studio";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"start/intro.md": {
+	id: "start/intro.md";
+  slug: "start/intro";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

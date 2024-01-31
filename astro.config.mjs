@@ -16,15 +16,16 @@ export default defineConfig({
       ],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Start here',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: "What you'll learn", link: '/start/intro/' },
+            { label: "Installing Android Studio", link: "/start/install-android-studio"}
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Build your first Android App',
+					autogenerate: { directory: 'app-dev' },
 				},
 			],
 		}),
