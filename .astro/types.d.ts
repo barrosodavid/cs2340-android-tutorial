@@ -185,6 +185,20 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
+"app-dev/create-project.md": {
+	id: "app-dev/create-project.md";
+  slug: "app-dev/create-project";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"college-app-desc/desc.md": {
+	id: "college-app-desc/desc.md";
+  slug: "college-app-desc/desc";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
@@ -192,13 +206,6 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"reference/example.md": {
-	id: "reference/example.md";
-  slug: "reference/example";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
 "start/install-android-studio.md": {
 	id: "start/install-android-studio.md";
   slug: "start/install-android-studio";
@@ -209,6 +216,20 @@ declare module 'astro:content' {
 "start/intro.md": {
 	id: "start/intro.md";
   slug: "start/intro";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"start/java_installation.md": {
+	id: "start/java_installation.md";
+  slug: "start/java_installation";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"team-intro/intro.md": {
+	id: "team-intro/intro.md";
+  slug: "team-intro/intro";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
