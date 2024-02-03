@@ -25,13 +25,24 @@ export default defineConfig({
 						items: [
 							// Each item here is one entry in the navigation menu.
 							{ label: "What you'll learn", link: '/start/intro/' },
-							{ label: "Installing JDK", link: "/start/java_installation"},
-							{ label: "Installing Android Studio", link: "/start/install-android-studio"}
+							{ label: "Installing Android Studio", link: "/start/install-android-studio"},
+							{ label: "Setting Up Android Studio", link: "/start/android-studio-setup"}
 						],
 					},
 					{
 						label: 'Build your first Android App',
-						autogenerate: { directory: 'app-dev' },
+						items: [
+							// Each item here is one entry in the navigation menu.
+							{ label: "Layout", link: '/app-dev/create-project' },
+							{ label: "Color", link: '/app-dev/color' },
+							{ label: "Views", link: '/app-dev/views' },
+							{ label: "Appereance", link: '/app-dev/appereance'},
+							{ label: "Interactive", link: '/app-dev/interactive'},
+							{ label: "Second Fragment", link: '/app-dev/second_fragment'},
+						]
+					},
+					{
+						label: 'Troubleshooting', items: [{ label: "Troubleshooting", link: '/app-dev/troubleshooting'}]
 					}]
 				},
 				{

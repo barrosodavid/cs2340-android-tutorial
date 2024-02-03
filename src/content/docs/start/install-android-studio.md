@@ -46,4 +46,6 @@ Depending on the OS of your choice, Android Studio requieres the following minim
 * While installing, make sure to toggle the option 'Android Virtual Device'.
 * [Insertar imagen]
 
+Android Studio comes bundled with OpenJDK, which allows you to run Java applications directly. However, you can also install JDK (Java Devcelopment Kit) by yourself before if you want to have it separately from Android Studio.
+
 

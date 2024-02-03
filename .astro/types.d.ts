@@ -185,9 +185,51 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
+"app-dev/appereance.md": {
+	id: "app-dev/appereance.md";
+  slug: "app-dev/appereance";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"app-dev/color.md": {
+	id: "app-dev/color.md";
+  slug: "app-dev/color";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "app-dev/create-project.md": {
 	id: "app-dev/create-project.md";
   slug: "app-dev/create-project";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"app-dev/interactive.md": {
+	id: "app-dev/interactive.md";
+  slug: "app-dev/interactive";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"app-dev/second_fragment.md": {
+	id: "app-dev/second_fragment.md";
+  slug: "app-dev/second_fragment";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"app-dev/troubleshooting.md": {
+	id: "app-dev/troubleshooting.md";
+  slug: "app-dev/troubleshooting";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"app-dev/views.md": {
+	id: "app-dev/views.md";
+  slug: "app-dev/views";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -206,6 +248,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"start/android-studio-setup.md": {
+	id: "start/android-studio-setup.md";
+  slug: "start/android-studio-setup";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "start/install-android-studio.md": {
 	id: "start/install-android-studio.md";
   slug: "start/install-android-studio";
@@ -216,13 +265,6 @@ declare module 'astro:content' {
 "start/intro.md": {
 	id: "start/intro.md";
   slug: "start/intro";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"start/java_installation.md": {
-	id: "start/java_installation.md";
-  slug: "start/java_installation";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
