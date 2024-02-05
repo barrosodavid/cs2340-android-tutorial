@@ -44,7 +44,7 @@ Depending on the OS of your choice, Android Studio requieres the following minim
 * The webpage will automatically detect your system's operating system and will prompt you to the executable file your system needs.
 * Please note that the version 'Hedgehog' might not be the latest version available. 
 * While installing, make sure to toggle the option 'Android Virtual Device'.
-![Android studio virtual](/public/virtual.png)
+![Android studio virtual](/cs2340-android-tutorial/virtual.png)
 
 Android Studio comes bundled with OpenJDK, which allows you to run Java applications directly. However, you can also install JDK (Java Devcelopment Kit) by yourself before if you want to have it separately from Android Studio.
 
