@@ -16,9 +16,9 @@ Once you have installed Android Studio, it is time to open it for the first time
     * Make sure to select Java as the project's Language.
     * Do not change anything else.
 
-![Basic views activity selected](/src/assets/basic-views-activity-selected.png)
+![Basic views activity selected](/public/basic-views-activity-selected.png)
 
-![Project name input and java selected](/src/assets/java-selected.png)
+![Project name input and java selected](/public/java-selected.png)
 
 It will take a couple minutes to import all neccesary code.
 

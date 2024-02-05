@@ -38,13 +38,13 @@ Depending on the OS of your choice, Android Studio requieres the following minim
 
 ## Download steps
 * Go to [Android Studio](https://developer.android.com/studio/) webpage and click on Download Android Studio.
-![Android studio download](/src/assets/android_studio_download.png)
+![Android studio download](/public/android_studio_download.png)
 * Scroll down the terms and conditions and click on the button to download the executable.
-![Android studio terms](/src/assets/terms.png)
+![Android studio terms](/public/terms.png)
 * The webpage will automatically detect your system's operating system and will prompt you to the executable file your system needs.
 * Please note that the version 'Hedgehog' might not be the latest version available. 
 * While installing, make sure to toggle the option 'Android Virtual Device'.
-![Android studio virtual](/src/assets/virtual.png)
+![Android studio virtual](/public/virtual.png)
 
 Android Studio comes bundled with OpenJDK, which allows you to run Java applications directly. However, you can also install JDK (Java Devcelopment Kit) by yourself before if you want to have it separately from Android Studio.
 
