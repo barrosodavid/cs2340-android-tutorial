@@ -16,7 +16,9 @@ Once you have installed Android Studio, it is time to open it for the first time
     * Make sure to select Java as the project's Language.
     * Do not change anything else.
 
-[Insertar imagen]
+![Basic views activity selected](/src/assets/basic-views-activity-selected.png)
+
+![Project name input and java selected](/src/assets/java-selected.png)
 
 It will take a couple minutes to import all neccesary code.
 
@@ -29,7 +31,7 @@ It will take a couple minutes to import all neccesary code.
 * In the next dialog box, accept the defaults, and click Finish.
 
 
-## Connect your own Android Devide (optional)
+## Connect your own Android Device (optional)
 We recommend to use your own physical Android device if your system's performance is severely affected by the virtual machine.
 You will need:
 * An Android device.

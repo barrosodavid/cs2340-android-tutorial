@@ -1,0 +1,189 @@
+---
+title: Views
+description: This course made by students, for students 
+---
+
+import { Code } from "@astrojs/starlight/components";
+
+In this section, we will add two more buttons to the user interface, and update the existing button.
+
+You'll learn
+
+- ✅ How to add buttons to the user interface
+- ✅ How to constrain the position of a view to another view
+
+# View constraint properties
+
+1. Open `fragment_first.xml` in text mode and look at the constraint properties for the `TextView` element.
+
+```xml
+<TextView
+    android:id="@+id/textview_first"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/lorem_ipsum"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+```
+
+These properties define the position of the `TextView`.
+
+You can constrain the top, bottom, left, and right sides of a view to the top, bottom, left and right sides of another view.
+
+2. Open `fragment_first.xml` in design mode and click on the `TextView` element. You will see the constraint properties in an interactive manner in the right panel.
+
+![Constraint properties](/src/assets/constraint-properties.png)
+
+Each of the grey dots represents a constraint, to the top, bottom, left and right.
+
+# Add buttons to the user interface
+
+To learn how to use constraints to connect the positions of views to each other, you will add buttons to the layout. Your first goal is to add a button and some constraints, and change the constraints on the Next button.
+
+1. Notice the Palette at the top left of the layout editor. Move the sides if you need to, so that you can see many of the items in the palette.
+
+![Palette](/src/assets/palette.png)
+
+2. Click on some of the categories, and scroll the listed items if needed to get an idea of what's available.
+
+3. Drag a Button from the palette to the Component Tree. You can place it near the other button.
+
+# Add constraints to the button
+
+1. Move the cursor over the circle at the top of the `Button`
+
+![Top constraint added](/src/assets/topconstraint.png)
+
+2. Click and drag the circle at the top of the Button onto the circle at the bottom of the TextView.
+
+![Drag bottom constraint](/src/assets/drag-bottom-constraint.png)
+
+The Button is now sitting just below the TextView. You can see the constraint line connecting the two views.
+
+Now in the `fragment_first.xml` file, you will see the following constraint property added to the Button.
+```xml
+app:layout_constraintTop_toBottomOf="@+id/textview_first"
+```
+
+3. Now also add a constraint to the left side of the Button with the left side of the screen.
+
+4. Do the same for the right and the bottom sides of the Button and the screen.
+
+
+Before adding another button, relabel this button so things are a little clearer about which button is which.
+
+1. Click on the button you just added in the design layout.
+
+2. Look at the Attributes panel on the right, and notice the id field.
+
+3. Change the id from button to toast_button.
+
+# Add constraints to the `Next` button
+
+You will adjust the button labeled Next, which Android Studio created for you when you created the project. The constraint between it and the TextView looks a little different, a wavy line instead of a jagged one, with no arrow. This indicates a chain, where the constraints link two or more objects to each other, instead of just one to another. For now, you'll delete the chained constraints and replace them with regular constraints.
+
+**Deleting a constraint**
+
+- In the design view, hold the <kbd>Ctrl</kbd> key (<kbd>Command</kbd> on Mac), and click the constraint to delete it.
+- Or in the Attributes panel, click the x next to the constraint you want to delete.
+
+Now let's add new constraints to the Next button.
+
+1. Remove the constraints from the Next button to the TextView.
+2. Remove the constraint of the `TextView` from the bottom of the text to the Next button.
+3. Constrain the top and bottom of the `Next` button so that the top of the button is constrained to the bottom of the `TextView` and the bottom is constrained to the bottom of the screen. The right side of the button is constrained to the right side of the screen.
+4. Also constrain the `TextView` to the bottom of the screen.
+
+The constraints should look like this:
+
+![Constrained textview](/src/assets/constraints1.png)
+
+![Constrained next button](/src/assets/constraints2.png)
+
+# Change the text of the toast button
+
+1. Click on the new button in the design layout.
+2. In the Attributes panel, change the text from Button to Toast.
+
+# Update the Next button
+
+You'll make some changes to the button to match its new role, which will be to generate and display a random number.
+
+1. Change the id of the button from `button_first` to `random_button` in the Attributes panel.
+2. If you get a dialog box asking to update all usages of the button, click **Yes**. This will update the button's id in the Java code as well.
+3. Change the text of the button from Next to Random.
+
+# Add a third button
+
+1. Drag another Button from the palette to the Component Tree.
+2. Place it in between the other buttons.
+3. Change the id of the button from `button` to `count_button` in the Attributes panel.
+4. Change the text of the button from Button to Count.
+5. Add constraints to the button so that it is constrained to the Toast button, the Random button, the TextView, and the bottom of the screen.
+
+![Constrained Count button](/src/assets/constraints3.png)
+
+This is the resulting XML, feel free to compare it with your own.
+
+:::tip
+If you get stuck, you can always compare your code with the finished code in this [GitHub repository](https://github.com/barrosodavid/My-First-App-Java)
+:::
+
+<Code code={`<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFB00"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/random_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Random"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+
+        <TextView
+            android:id="@+id/textview_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF0000"
+            android:text="@string/lorem_ipsum"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/tooast_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+
+        <Button
+            android:id="@+id/count_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Count"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/random_button"
+            app:layout_constraintStart_toEndOf="@+id/tooast_button"
+            app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>`} lang="xml" title="res/layout/fragment_first.xml" />
+

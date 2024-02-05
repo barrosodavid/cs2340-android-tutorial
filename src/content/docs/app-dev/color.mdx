@@ -1,0 +1,109 @@
+---
+title: Color
+description: This course made by students, for students 
+---
+
+import { Code } from "@astrojs/starlight/components";
+
+So far, we have learned how to change property values. Next, you will learn how to change the color of the text in the TextView. To do so, we will create new color resources that will be available in all our project.
+
+## Adding a new color resource
+
+In the **Project** panel on the left, double-click on `res` > `values` > `colors.xml` to open the color resource file.
+
+<Code code={`<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
+`} lang="xml" title={"res/values/colors.xml"} />
+
+:::note
+Different versions of Android Studio use different values for these colors, so you may see other colors here.
+:::
+
+If you wanted to add a new color resource to the file, you would add a new line with the following format:
+
+```xml
+<color name="colorName">#RRGGBB</color>
+```
+
+Where `colorName` is the name of the color resource and `#RRGGBB` is the hexadecimal value of the color.
+
+Note that we could also include an alpha value which represents the transparency of the color. The format for this is `#AARRGGBB`, where `AA` is the alpha value.
+
+1. Let's add a new color to the file. Add the following line to the color resources file:
+
+```diff lang="xml"
++ <color name="screenBackground">#FFEE58</color>
+```
+
+Your file should now look like this:
+
+<Code code={`<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="screenBackground">#FFEE58</color>
+</resources>
+`} lang="xml" title={"res/values/colors.xml"} />
+
+## Changing the background color of the app 
+
+1. Go back to `fragment_first.xml`
+
+2. In the Component Tree, select the `ConstraintLayout`
+
+3. In the **Attributes** panel, look **All Attributes* and select the **background** property.
+
+4. Press Enter, type "c" and lookup `@color/screenBackground` in the list of suggestions.
+
+Now the background color of the `ConstraintLayout` should be yellow.
+
+## Changing the text color of the TextView
+
+Add a new color resource to the file. Add the following line to the color resources file:
+
+```xml
+<color name="textColor">#FF0000</color>
+```
+
+1. In the **Component Tree**, select the `TextView`.
+
+2. In the **Attributes** panel, look for the **background** property.
+
+3. Press Enter, type "c" and lookup `@color/textColor` in the list of suggestions.
+
+Now the text color of the `TextView` should be red.
+
+## Exploring width and height properties
+
+Now that we have changed the color of the text, let's explore the width and height properties of the `TextView`.
+
+In the **Attributes** panel, you can also change the width and height of the `TextView`. You can change the width and height to a specific value, or you can use the `wrap_content` and `match_parent` values.
+
+If we set them to `match_parent`, the `TextView` will take up the entire width and height of the `ConstraintLayout`. If we set them to `wrap_content`, the `TextView` will only take up the width and height of the text.
+
+### Using `match_parent`
+![Application with match parent layout sizes](/src/assets/color-match-parent.png)
+
+`match_parent` takes up the width and height of the parent layout 
+
+### Using `wrap_content`
+![Application with wrap content layout sizes](/src/assets/color-wrap-content.png)
+
+`wrap_content` only takes up the width and height of the text
+
+If we set the layout width and height to `match_parent` for the ConstraintLayout, it will take up the entire width and height of the screen.
+
+:::note
+If you are not able to fill the entire viewport of the device, check in the root Layout that the attribute `fillViewport` is checked `true`.
+:::
+
+We can also set the width and height to a specific value, such as `100dp` or `200dp`. This will set the width and height to a specific value in density-independent pixels (dp).
+
+:::caution[Be careful when using fixed values!]
+It is recommended to use `wrap_content` and `match_parent` for the width and height of the `TextView` and `ConstraintLayout` to ensure that the app looks good on all devices, do not over-utilize fixed values, as they may not look good on all devices.
+:::
+
+To continue the tutorial, set back the width and height of the `TextView` to `wrap_content`.
