@@ -10,7 +10,7 @@ Hello! This is Group 40's First Project webpage for CS2340 at Georgia Tech. Our 
 ## David Barroso
 
 ## Ismael Zhu
-Third year CS GT-UC3M exchange student. Been in charge of creating the Course display funtion on the application and writing the tutorial.
+Third year CS GT-UC3M exchange student. Been in charge of creating the Course display function on the application and writing a small part of the tutorial, alongside the recording of the college app video showcase.
 
 ## Hans Ibarra
 
