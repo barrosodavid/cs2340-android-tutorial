@@ -20,7 +20,7 @@ Third year CS GT-UC3M exchange student.
 - Recording of the college app video showcase.
 
 ## Hans Ibarra
-
+First Year CS Student 
 - Developed the Assignment screen and sorting functionality in the College App
-- Designed home screen
-- 
+- Designed & Styled home screen
+- Completed Second Fragment Part of Tutorial
