@@ -190,98 +190,98 @@ declare module 'astro:content' {
   slug: "app-dev/appearance";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "app-dev/color.mdx": {
 	id: "app-dev/color.mdx";
   slug: "app-dev/color";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "app-dev/create-project.md": {
 	id: "app-dev/create-project.md";
   slug: "app-dev/create-project";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "app-dev/interactive.mdx": {
 	id: "app-dev/interactive.mdx";
   slug: "app-dev/interactive";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "app-dev/keep-learning.mdx": {
 	id: "app-dev/keep-learning.mdx";
   slug: "app-dev/keep-learning";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "app-dev/second_fragment.md": {
 	id: "app-dev/second_fragment.md";
   slug: "app-dev/second_fragment";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "app-dev/troubleshooting.md": {
 	id: "app-dev/troubleshooting.md";
   slug: "app-dev/troubleshooting";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "app-dev/views.mdx": {
 	id: "app-dev/views.mdx";
   slug: "app-dev/views";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "college-app-desc/desc.md": {
 	id: "college-app-desc/desc.md";
   slug: "college-app-desc/desc";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "start/android-studio-setup.md": {
 	id: "start/android-studio-setup.md";
   slug: "start/android-studio-setup";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "start/install-android-studio.md": {
 	id: "start/install-android-studio.md";
   slug: "start/install-android-studio";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "start/intro.md": {
 	id: "start/intro.md";
   slug: "start/intro";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 "team-intro/intro.md": {
 	id: "team-intro/intro.md";
   slug: "team-intro/intro";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
 };
 
@@ -293,5 +293,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }

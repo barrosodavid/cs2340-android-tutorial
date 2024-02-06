@@ -8,11 +8,19 @@ description: This course made by students, for students
 Hello! This is Group 40's First Project webpage for CS2340 at Georgia Tech. Our team is composed by the following members:
 
 ## David Barroso
+Third year CS GT-UC3M exchange student.
+- Development of the website & deploy with GitHub Pages.
+- Writing a part of the tutorial.
+- Implemented To-do list and Exams list in the College App.
 
 ## Ismael Zhu
-Third year CS GT-UC3M exchange student. Been in charge of creating the Course display function on the application and writing a small part of the tutorial, alongside the recording of the college app video showcase.
+Third year CS GT-UC3M exchange student.
+- Designed and implemented the Course display function in the College App.
+- Writing a small part of the tutorial.
+- Recording of the college app video showcase.
 
 ## Hans Ibarra
 
-
-
+- Developed the Assignment screen and sorting functionality in the College App
+- Designed home screen
+- 
