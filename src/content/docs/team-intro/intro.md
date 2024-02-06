@@ -23,4 +23,4 @@ Third year CS GT-UC3M exchange student.
 First Year CS Student 
 - Developed the Assignment screen and sorting functionality in the College App
 - Designed & Styled home screen
-- Completed Second Fragment Part of Tutorial
+- Writing a part of the tutorial
