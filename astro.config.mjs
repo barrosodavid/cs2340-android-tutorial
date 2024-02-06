@@ -36,7 +36,8 @@ export default defineConfig({
 							{ label: "Layout", link: '/app-dev/create-project' },
 							{ label: "Color", link: '/app-dev/color' },
 							{ label: "Views", link: '/app-dev/views' },
-							{ label: "Updating appearance", link: '/app-dev/appeareance'},
+							{ label: "Updating appearance", link: '/app-dev/appearance'},
+							
 							{ label: "Interactive", link: '/app-dev/interactive'},
 							{ label: "Second Fragment", link: '/app-dev/second_fragment'},
 							{ label: "Keep Learning", link: 'app-dev/keep-learning'},

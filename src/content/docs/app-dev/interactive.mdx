@@ -1,0 +1,86 @@
+---
+title: Interactive
+description: This course made by students, for students 
+---
+
+You'll learn
+
+- ✅ How to programmatically find a view by its ID in Java.
+- ✅ How to add click listeners for a view.
+- ✅ How to set and get property values of a view from code.
+
+# Auto imports
+
+In Java, every time you want to use a function from a different file, you need to import it. This can be a bit annoying, but Android Studio has a feature that can help you with that called **Auto Imports**.
+
+It is enabled by default, but if you don't have it enabled, you can find it and enable it in the top right corner.
+
+![File settings menu](/cs2340-android-tutorial/file-settings-menu.png)
+
+# Show a toast
+
+In this step, you will attach a Java method to the Toast button to show a toast when the user presses it. A toast is a short message that appears at the bottom of the screen for a short period of time.
+
+1. Open `FirstFragment.java` in app > java > com.example.cs2340_android_tutorial > FirstFragment.
+
+2. This class has only two methods, `onCreateView` and `onViewCreated`. These execute when the fragment is created, one after the other. Check the following code to the `onViewCreated` method:
+
+:::tip
+If you want to deep more into the difference between `onCreateView` and `onViewCreated`, you can check [this article](https://medium.com/@abdulqadirtr/deep-dive-into-fragments-when-to-use-oncreate-oncreateview-and-onviewcreated-33faf6454955).
+:::
+
+```java
+binding.randomButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+            }
+        });
+```
+
+This code is setting a click listener to the button with the ID `random_button`. When the user clicks the button, the app navigates to the `SecondFragment`.
+
+3. Now add the following code after the previous one to set a click listener to the Toast button, and show a toast when the user clicks it:
+
+```java
+binding.toast_button.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View view) {
+       Toast myToast = Toast.makeText(getActivity(), "Hello toast!", Toast.LENGTH_SHORT);
+       myToast.show();
+   }
+});
+```
+
+4. Run the app and press the **Toast** button. You should see a toast at the bottom of the screen.
+
+![Toast in the bottom of the screen](/cs2340-android-tutorial/toast-bottom-screen.png)
+
+# Make the Count button update the TextView
+
+In this step, you will attach a Java method to the Count button to update the TextView when the user presses it, making it show a counter that increases by one every time the button is pressed.
+
+1. In `fragment_first.xml`, make sure that the `id` for the `TextView` is `textview_first`. If it's not, change it to that.
+
+2. In `FirstFragment.java`, add the following code to the `onViewCreated` method:
+
+```java
+binding.countButton.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View view) {
+       TextView myTextView = binding.textviewFirst;
+       int currentCount = Integer.parseInt(myTextView.getText().toString());
+       myTextView.setText(String.valueOf(currentCount + 1));
+   }
+});
+```
+
+It might look a bit confusing at first, but it's actually quite simple if we go step-by-step. This code is setting a click listener to the button with the ID `count_button`. 
+When the user clicks the button, the app gets the current value of the `TextView`, which has a text or `string` type in Java.
+    
+Then, it converts the text to an `integer` number, adds 1 to it, and sets the new value of the `TextView` to the new number.
+
+3. Run the app and press the **Count** button. You should see the number in the `TextView` increase by one every time you press the button.
+
+![App with counter](/cs2340-android-tutorial/app-with-counter.png)

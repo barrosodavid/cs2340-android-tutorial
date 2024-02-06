@@ -1,0 +1,76 @@
+---
+title: Appereance
+description: This course made by students, for students 
+---
+
+import { Code } from "@astrojs/starlight/components";
+
+We can improve the appearance of the layout with a few small changes
+
+# Add new background color
+
+1. In `colors.xml`, add a new color element named `screenBackground` and set it to `#2196F3`, which is a blue shade in the Material Design palette.
+
+```xml
+...
+<color name="screenBackground">#2196F3</color>
+```
+
+2. Add a new color named `buttonBackground` and set it to `#BBDEFB`, which is a lighter blue shade.
+
+```xml
+...
+<color name="buttonBackground">#BBDEFB</color>
+```
+
+The resulting `colors.xml` file should look like this:
+
+<Code code={`<color name="primaryColor">#2196F3</color>
+<color name="black">#00000</color>
+<color name="white"#>FFFFFF</color>
+<color name="screenBackground">#2196F3</color>
+<color name="buttonBackground">#BBDEFB</color>`}
+lang="xml" title="res/values/colors.xml" /> 
+
+3. In the `fragment_first.xml` layout, use the new background colors. You can use the Attributes panel or directly edit the XML.
+
+# Give left and right margins to the buttons
+
+1. Give the **Toat** button a left margin of `24dp` and give the **Random** button a right margin of `24dp`. To do so, use the Constraint Widget in the attributes panel, although you can also edit the XML directly. 
+
+![Add margins to the buttons](/cs2340-android-tutorial/left-right-margin.png)
+
+# Update the appearance of the TextView
+
+1. Remove the background color of the `TextView` by removing the `android:background` attribute in the `fragment_first.xml` layout design or directly in the XML.
+
+2. Increase the text size of the `TextView` to 72sp.
+
+```xml
+android:textSize="72sp"
+```
+
+3. Change the font-family of the `TextView` to `sans-serif`.
+
+4. Add an app:layout_constraintVertical_bias property to the `TextView`. This is to move the `TextView` up a bit so that the screen is more evenly spaced. Feel free to adjust the value as you like.
+
+```xml
+app:layout_constraintVertical_bias="0.3"
+```
+
+:::tip
+You can also use the Constraint Widget to set the vertical bias. Click and drag the number 50 (0.5 bias) that appears on the left side, and slide it upwards to your desired bias.
+:::
+
+![Constraint Widget](/cs2340-android-tutorial/constraint-widget.png)
+
+You can also use horizontal bias to move tweak the horizontal position of a View.
+
+6. Make sure the layout_width is wrap_content and the horizontal bias is 50 (`app:layout_constraintHorizontal_bias="0.5").
+
+# Resulting appearance
+
+The resulting appearance of the app should be similar to this, depending on what colors and fonts you selected.
+
+![Resulting app after appearance change](/cs2340-android-tutorial/appearance-change.png)
+
