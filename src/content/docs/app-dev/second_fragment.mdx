@@ -3,6 +3,8 @@ title: Implementing second fragment
 description: This course made by students, for students
 ---
 
+import { Code } from "@astrojs/starlight/components"
+
 # Refining the User Interface for the Second Fragment
 
 In this section, we'll dive deeper into refining the user interface for the second fragment of your Android app. The goal is to update the Random button, enabling it to showcase a random number between 0 and the current count on a designated screen.
@@ -134,6 +136,10 @@ To apply the new background color, navigate to `fragment_second.xml` and locate 
 
 Incorporating a new background color not only enhances the visual aesthetic of your app but also serves as a visual cue to users, indicating a transition between different sections of your application.
 
+One possible result after following these steps is this:
+
+![Second fragment design](/cs2340-android-tutorial/second-fragment-design.png)
+
 ## Step 4: Examine the Navigation Graph
 
 As you initially set up your project using the Basic Activity template, Android Studio established a foundation by creating two fragments and a navigation graph to seamlessly connect them. Additionally, a button was configured to transmit a string argument from the first fragment to the second, which you later transformed into the Random button. Now, the goal is to enhance this configuration to pass a numerical argument instead of a string.
@@ -153,6 +159,8 @@ As you initially set up your project using the Basic Activity template, Android 
 -   **Rearrangement Flexibility**: Within the Navigation Editor, you can rearrange fragments to create an organized and logical flow. For instance, if `SecondFragment` is positioned to the left, you might want to drag `FirstFragment` to its left. This adjustment aids in visually aligning the fragments according to the sequence they are intended to be accessed during development.
 
 Exploring and understanding the Navigation Graph's configuration offers valuable insights into your app's navigational flow. This foundational knowledge is crucial as we proceed to refine the navigation pattern, aiming to facilitate the transmission of numerical arguments and enhance the overall user experience.
+
+![Navigation graph](/cs2340-android-tutorial/nav-graph.png)
 
 ## Step 5: Enable SafeArgs
 
@@ -202,6 +210,8 @@ In this step, we'll establish precise and type-safe arguments within the Navigat
 
 -   Look for the **"Actions" section** within the Attributes panel. Notice the defined navigation actions, especially the transition from `FirstFragment` to `SecondFragment`. We'll add an argument to this specific action.
 
+![Navigation action selected](/cs2340-android-tutorial/action-selected.png)
+
 ### Examine SecondFragment Attributes
 
 -   **Click on `SecondFragment`** within the Navigation Editor. The Attributes panel will show an "Arguments" section that likely says "Nothing to show."
@@ -217,6 +227,8 @@ In this step, we'll establish precise and type-safe arguments within the Navigat
     -   **Type**: Set to `Integer` for a clear representation of the data being passed.
     -   **Finalize**: Click the "Add" button to confirm the creation of the new argument.
 
+![Add argument dialog](/cs2340-android-tutorial/add-my-arg.png)
+
 By completing these steps, you establish a well-defined and type-safe argument named `myArg` for the navigation action from `FirstFragment` to `SecondFragment`. This approach enhances the reliability and readability of your codebase, contributing to a more maintainable app architecture.
 
 ## Step 7: Send the Count to the Second Fragment
@@ -230,9 +242,7 @@ This step focuses on enhancing the functionality of the **Next/Random** button c
 Begin by opening `FirstFragment.java`, located at `app > java > com.example.myfirstapp > FirstFragment`. Locate the `onViewCreated()` method and observe the existing code that establishes the click listener for the Random button.
 
 Replace the current click listener code with the following:
-
-```java
-public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+<Code code={`public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
 
     view.findViewById(R.id.random_button).setOnClickListener(new View.OnClickListener() {
@@ -266,7 +276,7 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         }
     });
 }
-```
+`} lang="java" title="java/com.example.myfirstapp/FirstFragment" />
 
 ### 2. Understanding the Code
 
@@ -305,8 +315,7 @@ With the successful transmission of the current count from the first fragment to
 
 In `SecondFragment.java`, apply the following modifications:
 
-```java
-// Import navArgs to handle navigation arguments
+<Code code={`// Import navArgs to handle navigation arguments
 import androidx.navigation.fragment.navArgs;
 
 public class SecondFragment extends Fragment {
@@ -339,8 +348,7 @@ public class SecondFragment extends Fragment {
 
     // Existing code...
 }
-
-```
+`} lang="java" title="java/com.example.myfirstapp/SecondFragment" />
 
 Here's a detailed explanation of the changes made:
 
@@ -355,4 +363,6 @@ Here's a detailed explanation of the changes made:
 
 By implementing these extensive modifications, your app will dynamically display both the count and a randomly generated number on the second screen, providing users with an engaging and interactive experience.
 
-So, Congratulations, you built your first app :)
+So, Congratulations! you built your first app :)
+
+![App result](/cs2340-android-tutorial/app-result.png)
