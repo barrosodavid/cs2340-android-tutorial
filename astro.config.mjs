@@ -39,7 +39,7 @@ export default defineConfig({
 							{ label: "Updating appearance", link: '/app-dev/appearance'},
 							
 							{ label: "Interactive", link: '/app-dev/interactive'},
-							{ label: "Second Fragment", link: '/app-dev/second_fragment'},
+							{ label: "Second Fragment", link: '/app-dev/second-fragment'},
 							{ label: "Keep Learning", link: 'app-dev/keep-learning'},
 						]
 					},
